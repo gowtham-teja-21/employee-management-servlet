@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login page</title>
+ <style>
+	 * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+     body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+    }
+
+    .div {
+      background-color: #ffffff;
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 25px;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    input{
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #5563DE;
+      outline: none;
+      box-shadow: 0 0 8px rgba(85, 99, 222, 0.3);
+    }
+     .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      background: #5563DE;
+      color: #fff;
+    }
+
+    .login-btn:hover {
+      background: #3843b8;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(85, 99, 222, 0.4);
+    }
+
+    .create-btn {
+      background: transparent;
+      border: 2px solid #5563DE;
+      color: #5563DE;
+    }
+
+    .create-btn:hover {
+      background: #5563DE;
+      color: #fff;
+    }
+    
+ </style>
+</head>
+<body>
+   <div class="div">
+    <h2>User Login</h2>
+    <form method="get" action="login">
+      <input type="text" placeholder="Enter Username" name="email"> 
+      <input type="password" placeholder="Enter Password" name="password">
+      
+      <!-- Buttons -->
+      <button type="submit" class="btn login-btn">Submit</button>
+      <button type="button" class="btn create-btn" onclick="window.location.href='createaccount.html'">Create Account</button>
+    </form>
+  </div>
+</body>
+</html>

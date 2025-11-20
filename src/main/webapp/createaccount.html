@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create account</title>
+  <style>
+	   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+    }
+
+    .create-container {
+      background-color: #ffffff;
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 420px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 25px;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      color: #444;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #5563DE;
+      outline: none;
+      box-shadow: 0 0 8px rgba(85, 99, 222, 0.3);
+    }
+
+    /* Radio group styles */
+    .radio-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #f7f9ff;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      font-size: 14px;
+    }
+
+    .radio-option input[type="radio"] {
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .create-btn {
+      background: #5563DE;
+      color: #fff;
+    }
+
+    .create-btn:hover {
+      background: #3843b8;
+      transform: scale(1.02);
+      box-shadow: 0 5px 15px rgba(85, 99, 222, 0.25);
+    }
+
+    .back-btn {
+      background: transparent;
+      border: 2px solid #5563DE;
+      color: #5563DE;
+    }
+
+    .back-btn:hover {
+      background: #5563DE;
+      color: #fff;
+    }
+
+    /* Small responsive tweak */
+    @media (max-width: 460px) {
+      .create-container { width: 92%; padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="create-container">
+    <h2>Create Employee Account</h2>
+    <form method="post" action="creat">
+      <!-- Employee ID -->
+      <label for="empId">Employee ID</label>
+      <input type="text" id="empId" name="empId" placeholder="Enter Employee ID">
+
+      <!-- Name -->
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter Full Name">
+      
+      <!-- age -->
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="Enter age">
+
+      <!-- Gender (radio buttons) -->
+      <label>Gender</label>
+      <div class="radio-group" role="radiogroup" aria-label="Gender">
+        <label class="radio-option">
+          <input type="radio" name="gender" value="Male">
+          <span>Male</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="gender" value="Female">
+          <span>Female</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="gender" value="Other">
+          <span>Other</span>
+        </label>
+      </div>
+
+      <!-- Salary -->
+      <label for="salary">Salary</label>
+      <input type="number" id="salary" name="salary" placeholder="Enter Salary">
+
+      <!-- Address -->
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter Address"></textarea>
+
+      <!-- Phone 
+      <label for="phone">Phone Number</label>
+     <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number"> -->
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email Address">
+
+      <!-- Password -->
+      <label for="password">Password</label>
+      <input type="text" id="password" name="password" placeholder="Enter Password">
+
+      <!-- Buttons -->
+      <button type="submit" class="btn create-btn">Submit</button>
+      <button type="submit" class="btn back-btn"><a href="login.html">Back to Login</button>
+    </form>
+  </div>
+</body>
+</html>
