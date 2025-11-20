@@ -50,15 +50,16 @@ Validations and error handling
 
 Clean folder structure under src/main/java & src/main/webapp
 
-🛠️ Tech Stack Used
-Layer	Technology
-Backend Logic	Java Servlets
-Database	MySQL + JDBC
-Server	Apache Tomcat
-Frontend	HTML, CSS, JavaScript
-Build Structure	Maven-style folder structure
-IDE Supported	Eclipse / IntelliJ / NetBeans
-📂 Project Structure (Simple Overview)
+| Layer           | Technology                    |
+| --------------- | ----------------------------- |
+| Backend Logic   | Java Servlets                 |
+| Database        | MySQL + JDBC                  |
+| Server          | Apache Tomcat                 |
+| Frontend        | HTML, CSS, JavaScript         |
+| Build Structure | Maven-style folder structure  |
+| IDE Supported   | Eclipse / IntelliJ / NetBeans |
+
+
 employee-management-servlet
 │
 ├── src/main/java/employemanagement
